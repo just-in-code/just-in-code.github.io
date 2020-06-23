@@ -102,9 +102,9 @@
 }
 
 .product {
-    padding:10vw;
+    width:24vw;
+    height:40vh;
     background-color:#30e3ca;
-    border-radius:1em;
 }
 
 #footer {
@@ -132,4 +132,24 @@ h4 {
 #about {
     width:85%;
 }
+
+img {
+    width:100%;
+    height:70%;
+}
+
+.product-link {
+    width:100%;
+    height:10%;
+    border:none;
+    background-color:#fff;
+    opacity:0.6;
+    cursor:pointer;
+}
+
+.captions {
+    height:10%;
+    color:#e4f9f5;
+}
+
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Cycle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p id="dred">RED: 0</p>
+            <p id="dgreen">GREEN: 0</p>
+            <p id="dblue">BLUE: 0</p>
+        </div>
+        <div id="settingsarea">
+            <form id="inputSection">
+                <div class="group">
+                    <label for="red">Red</label>
+                    <input type="number" id="red" class="userInput" value="0">
+                    <label for="incvalue">Increment value:</label>
+                    <input type="number" value="0" id="incred"> 
+                </div>
+                <div class="group">
+                    <label for="green">Green</label>
+                    <input type="number" id="green" class="userInput" value="0">
+                    <label for="incvalue">Increment value:</label>
+                    <input type="number" value="0" id="incgreen">
+                </div>
+                <div class="group">
+                    <label for="blue">Blue</label>
+                    <input type="number" id="blue" class="userInput" value="0">
+                    <label for="incvalue">Increment value:</label>
+                    <input type="number" value="0" id="incblue">
+                </div>
+            </form>
+            <button id="submit">START</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

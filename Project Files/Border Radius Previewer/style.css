@@ -1,0 +1,28 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:'Roboto', sans-serif;
+}
+
+html, body, #container {
+    height:100%;
+}
+
+#container {
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-direction:column;
+}
+
+#obj {
+    width:50vh;
+    height:50vh;
+    background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%)
+}
+
+.group {
+    text-align: center  ;
+    display:inline-block;
+    margin:2em;
+}
