@@ -1,0 +1,81 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+#container {
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#inputSection {
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    width:100%;
+    height:50%;
+    z-index: 1;
+}
+
+.group {
+    width:25%;
+    height:100%;
+    text-align: center;
+}
+
+#JSON {
+    resize:none;
+    width:100%;
+    height:100%;
+    border:none;
+    padding:1em;
+    font-size:2em;
+    background-color: white;
+    text-align: left;
+    overflow:scroll;
+}
+
+#CSV {
+    width:100%;
+    height:100%;
+    background-color: white;
+    font-size:2em;
+    padding:1em;
+    overflow:scroll;
+}
+
+#convert {
+    width:15em;
+    height:15em;
+    background-color: white;
+    border:1px solid white;
+    border-radius:50%;
+    cursor: pointer;
+    /* font-size:1em; */
+}
+
+.title {
+    margin:2em;
+}
+
+#bridge {
+    width:100%;
+    height:8%;
+    top:49.8%;
+    border:4px;
+    border-style: solid;
+    border-color:white;
+    border-left:0px solid #74f2ce;
+    border-right:0px solid #74f2ce;
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    position: absolute;
+    z-index:-1;
+}

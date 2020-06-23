@@ -1,0 +1,140 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color: #0beef9;
+    background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+    color:white;
+} 
+
+input, button {
+    border:none;
+}
+
+input:focus {
+    outline:0;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+#userForm {
+    width:100%;
+    height:50%;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-direction: column;
+    /* display:none; */
+}
+
+#eventName {
+    width:60%;
+    height:20%;
+    padding:2em;
+    font-size:1em;
+    border-radius:3em;
+}
+
+#date {
+    width:60%;
+    height:15%;
+    /* background-color:transparent; */
+    /* border-bottom:2px solid white;
+    /* text-align: center; 
+    */
+    border-radius:3em;
+    padding:2em;
+    font-size:1em;
+}
+
+#optionalTime {
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    width:60%;
+}
+
+#optionalTime > input{
+    width:20%;
+    font-size:0.8em;
+    border-radius: 1em;
+    padding:0.5em;
+    color:black;
+    text-align: center;
+}
+
+#optionalTime > input:optional {
+    background-color:#e2e2e2;
+}
+
+#optionalTime > input:visited {
+    background-color:white;
+    color:black;
+}
+
+#optionalTime > input:focus {
+    background-color:white;
+    color:black;
+}
+
+#submit {
+    background-color:white;
+    cursor:pointer;
+    width:15%;
+    height:8%;
+    border-radius: 3em;
+}
+
+#countdown {
+    width:70%;
+    height:60%;
+    background-color:white;
+    border-radius:3em;
+    /* display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column; */
+    display:none;
+}
+
+#countdownDisplay {
+    width:100%;
+    height:40%;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+#countdownDisplay > div {
+    background-color:grey;
+    font-size:5em;
+    width:20%;
+    height:100%;
+    text-align: center;
+    background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%);
+}
+
+.unit {
+    font-size:0.5em;
+}
+
+#eventTitle {
+    color:black;
+    text-align: center;
+    margin:1em;
+}

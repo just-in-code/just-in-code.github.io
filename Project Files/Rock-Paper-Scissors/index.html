@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+        <title>Rock_Paper_Scissors</title>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="title">
+                <h1 style="display:inline-block">Rock&#x1F44APaper&#x1F590Scissors&#x270C;&#xFE0F;</h1> <!--ROCK👊paper🖐Scissors✌️-->
+                <button id="startGame">Click To Start</button>
+            </div> 
+            <div id="user" class="players">
+                <div id="userInfo" class="playerInfo">
+                    <p class="playerName">User</p>
+                    <p id="userScore" class="playerScore">User Score = 0</p>
+                    <p id="userPrevious" class="playerPrevious">Match Won = 0</p>
+                </div>
+                <div id="userChoice" class="playerChoice">
+                    <p class="choiceSymbol">&#x1F91C;</p>
+                </div>
+                <div id="userSelected" class="availableChoice">
+                    <div class="rock choice userChoices" data-choice="Rock">&#x1F44A</div>
+                    <div class="paper choice userChoices" data-choice="Paper">&#x1F590</div>
+                    <div class="scissors choice userChoices" data-choice="Scissors">&#x270C;&#xFE0F;</div>
+                </div>
+                <div class="status"></div>
+            </div>
+            <div id="computer" class="players">
+                <div id="computerInfo" class="playerInfo">
+                    <p class="playerName">Computer</p>
+                    <p id="computerScore" class="playerScore">Computer Score = 0</p>
+                    <p id="computerPrevious" class="playerPrevious">Match Won = 0</p>
+                </div>
+                <div id="computerChoice" class="playerChoice">
+                    <p class="choiceSymbol">&#x1F91B;</p>
+                </div>
+                <div id="computerSelected" class = "availableChoice">
+                    <div class="rock choice computerChoices" data-choice="Rock">&#x1F44A</div>
+                    <div class="paper choice computerChoices" data-choice="Paper">&#x1F590</div>
+                    <div class="scissors choice computerChoices" data-choice="Scissors">&#x270C;&#xFE0F;</div>
+                </div>
+                <div class="status"></div>
+            </div>
+        </div>
+        <div id="alert">
+        </div>
+        <button id="restart" onclick="resetGame(true)">Restart Game</button>
+        <button id="exit" onclick="exitGame()">Exit Game</button>
+        <script src="script.js"></script>
+    </body>
+</html>

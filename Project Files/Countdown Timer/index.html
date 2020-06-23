@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <div id="container">
+        <form id="userForm">
+            <h1>Countdown Timer</h1>
+            <input type="text" id="eventName" placeholder="Sample Event Name" required>
+            <input type="date" id="date" placeholder="DD-MM-YYYY" required>
+            <div id="optionalTime">
+                <input type="number" id="hours" placeholder="optional hours">:
+                <input type="number" id="minutes" placeholder="optional mins">:
+                <input type="number" id="seconds" placeholder="optional secs">
+            </div>
+            <button id="submit">START</button>
+        </form>
+        <div id="countdown">
+            <h1 id="eventTitle">Event Title</h1>
+            <div id="countdownDisplay">
+                <div id="countdownDays"><p class="unit">Days</p></div>
+                <div id="countdownHours"><p class="unit">Hours</p></div>
+                <div id="countdownMins"><p class="unit">Minutes</p></div>
+                <div id="countdownSecs"><p class="unit">Seconds</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
