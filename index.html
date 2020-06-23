@@ -2,6 +2,7 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="amp-script-src" content="sha384-YCFs8k-ouELcBTgzKzNAujZFxygwiqimSqKK7JqeKaGNflwDxaC3g2toj7s_kxWG"/>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -178,7 +179,7 @@
          <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
     </head>
         <body>
-            <amp-script layout="container" src="main.js">
+            <amp-script width="200" height="50" script="main">
 
             <div id="container">
                 <div id="header">
@@ -321,8 +322,7 @@
             <h5>@2020 by JOHN DOE. ALL RIGHTS RESERVED. | Proudly Hosted With Github Pages</h5>
         </div>
     </div>
-
-    <!-- <script src="main.js"></script> -->
     </amp-script>
+    <script id="main" type="text/plain" target="amp-script"></script>
   </body>
 </html>
