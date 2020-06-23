@@ -227,7 +227,7 @@
                         <div class="captions">
                             Binary To Decimal Converter
                         </div> 
-                        <input type="button" class="product-link" value="Check It Out!" onclick="window.location.href='Project Files/BinToDec/index.html';"></input>
+                        <input type="button" class="product-link" value="Check It Out!" id="bintodec"></input>
                     </div>
                     <div class="product">
                         <amp-img src="Project Files/Border Radius Previewer/Screenshot.png" alt="Image" height="400" width="700" layout="responsive"></amp-img>  
@@ -323,6 +323,10 @@
         </div>
     </div>
     </amp-script>
-    <script id="main" type="text/plain" target="amp-script"></script>
+    <script id="main" type="text/plain" target="amp-script">
+        document.getElementById("bintodec").addEventListener("click",() => {
+            window.location.href='Project Files/BinToDec/index.html';
+        })
+    </script>
   </body>
 </html>
