@@ -63,3 +63,9 @@ function createNewTimer(title, date, hour = 0, minute = 0, second = 0) {
     }, 1000)
 }
 
+function resetTimer() {
+    form.style.display = "flex";
+    document.getElementById("countdown").style.display = "none";
+}
+
+document.getElementById("reset").addEventListener("click", resetTimer);
