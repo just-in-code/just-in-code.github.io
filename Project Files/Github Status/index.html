@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Github Status</title>
+</head>
+<body>
+    <div id="container">
+        <div id="container-header">
+            <h1 id="title">Github Status</h1>
+            <h1 id="status"></h1>
+        </div>
+        <div id="container-content">
+            <div id="status-info">
+                <h2 id="status-update-time">Status Last Updated : </h2>
+            </div>
+            <div id="git-operations" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn1"></div>
+                    <div class="component-desc" id="cd1"></div>
+                    <div class="component-create" id="cc1"></div>
+                    <div class="component-update" id="cu1"></div>
+                </div>
+                <div class="status-box" id="sb1"></div>
+            </div>
+            <div id="api-requests" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn2"></div>
+                    <div class="component-desc" id="cd2"></div>
+                    <div class="component-create" id="cc2"></div>
+                    <div class="component-update" id="cu2"></div>
+                </div>
+                <div class="status-box" id="sb2"></div>
+            </div>
+            <div id="webhooks" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn3"></div>
+                    <div class="component-desc" id="cd3"></div>
+                    <div class="component-create" id="cc3"></div>
+                    <div class="component-update" id="cu3"></div>
+                </div>
+                <div class="status-box" id="sb3"></div>
+            </div>
+            <div id="issues-prs-projects" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn4"></div>
+                    <div class="component-desc" id="cd4"></div>
+                    <div class="component-create" id="cc4"></div>
+                    <div class="component-update" id="cu4"></div>
+                </div>
+                <div class="status-box" id="sb4"></div>
+            </div>
+            <div id="github-actions" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn5"></div>
+                    <div class="component-desc" id="cd5"></div>
+                    <div class="component-create" id="cc5"></div>
+                    <div class="component-update" id="cu5"></div>
+                </div>
+                <div class="status-box" id="sb5"></div>
+            </div>
+            <div id="github-packages" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn6"></div>
+                    <div class="component-desc" id="cd6"></div>
+                    <div class="component-create" id="cc6"></div>
+                    <div class="component-update" id="cu6"></div>
+                </div>
+                <div class="status-box" id="sb6"></div>
+            </div>
+            <div id="github-pages" class="components">
+                <div class="status-info">
+                    <div class="component-name" id="cn7"></div>
+                    <div class="component-desc" id="cd7"></div>
+                    <div class="component-create" id="cc7"></div>
+                    <div class="component-update" id="cu7"></div>
+                </div>
+                <div class="status-box" id="sb7"></div>
+            </div>
+
+            <div id="incidents">
+                <div id="all-incidents">
+                    <h1 id="title2">Resolved Incidents (Recent 50)</h1>
+                    <ul id="incident-list">
+                    </ul>
+                </div>
+            </div>
+            <div id="container-footer">
+                <p id="apilinks">API Used:<br><br>
+                    Github Website: <a href="https://github.com">https://github.com</a><br>
+                    Github Status Website: <a href="https://www.githubstatus.com/">https://www.githubstatus.com</a><br>
+                    Status API: <a href="https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json">https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json</a><br>
+                    Incident API: <a href="https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json">https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json</a></p>
+                <div id="end">
+                    MADE WITH ❤️ AND VANILLA JS
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

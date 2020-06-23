@@ -1,0 +1,85 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color:#20C20E;
+}
+
+#container {
+    width:100vw;
+    height: 100vh;
+    padding:2%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: black;
+}
+
+#container > div {
+    overflow-y: scroll;
+    scrollbar-color:#20C20E;
+}
+
+#notificationPanel {
+    width:100%;
+    height:15%;
+    border:2px solid #20C20E;
+    padding:1em;
+}
+
+#queryResults {
+    width:100%;
+    height:40%;
+    border:2px solid #20C20E;
+    padding:1em;
+}
+
+#buttonsArea {
+    width:100%;
+    height:10%;
+    border:2px solid #20C20E;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+button {
+    flex:1;
+    height:100%;
+    background-color: transparent;
+    border:2px solid white;
+    cursor: pointer;
+    color:white;    
+    font-size:1em;
+    border:2px solid #20C20E;
+}
+
+button:focus{
+    outline:none;
+}
+
+button:hover{
+    background-color: #20C20E;
+    opacity:0.8;
+}
+
+#logPanel {
+    width:100%;
+    height:15%;
+    padding:1em;
+    border:2px solid #20C20E;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 0.5em;
+}
+  

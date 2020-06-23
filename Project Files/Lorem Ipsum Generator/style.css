@@ -1,0 +1,39 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+#container {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    margin-top:2em;
+    margin-bottom:2em;
+    width:25%;
+    border:none;
+    border-bottom:1px solid #000;
+    padding:1em;
+    font-size:1em;
+}
+
+#result {
+    width:60%;
+    height:40%;
+    border:0.5px solid #000;
+    border-top-left-radius: 3em;
+    overflow:scroll;
+    padding:2em;
+    font-size:1em;
+}
+
+input, #result:focus {
+    outline:none;
+}

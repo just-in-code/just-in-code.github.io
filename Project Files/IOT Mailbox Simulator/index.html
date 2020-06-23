@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>IOT Mailbox Simulator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="notification-panel">
+            <h1>NOTIFICATION PANEL</h1>
+            <div id="notification-container"></div>
+        </div>
+        <div id="log-panel">
+            <h1>LOG PANEL</h1>
+            <div id="log-container"></div>
+        </div>
+        <div id="user-section">
+            <div id="button-section">
+                <h1 id="title">IOT Mailbox Simulator</h1>
+                <div id="button-container">
+                    <button id="startMonitor">START MONITOR</button>
+                    <button id="stopMonitor">STOP MONITOR</button>
+                    <button id="resetMonitor">RESET</button>
+                </div>
+            </div>
+            <div id="settings-section">
+                <h1>USER SETTINGS</h1>
+                <div id="settings-container">
+                    <h3>Interval Settings</h3>
+                    <input type="number" id="intervalRange" placeholder="numbers between 100 and 10000 " min = 100 max = 10000>
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

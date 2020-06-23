@@ -1,0 +1,124 @@
+:root {
+    --bgcolor: #01021e;
+    --txtcolor: #2BF5E9;
+    --bordercolor: #FF428E;
+    --buttonbordercolor:#e92efb;
+    --buttontextcolor:#09fbd3;
+}
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    color:var(--txtcolor);
+    text-align: left;
+}
+
+#container {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:var(--bgcolor);
+}
+
+#notification-panel {
+    width:30%;
+    height:100%;
+    border-right:1px solid var(--bordercolor);
+    padding:2em;
+}
+
+#notification-container, #log-container {
+    margin-top:1em;
+    width:100%;
+    height:90%;
+    overflow: scroll;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+#title {
+    text-align:right;
+    border:3px solid var(--txtcolor);
+    font-weight:300;
+    padding:0.1em;
+}
+
+#log-panel {
+    width:30%;
+    height:100%;
+    border-right:1px solid var(--bordercolor);
+    padding:2em;
+}
+
+#user-section {
+    width:40%;
+    height:100%;
+}
+
+#button-section {
+    width:100%;
+    height:50%;
+    border-bottom:1px solid var(--bordercolor);
+    padding:2em;
+}
+
+#button-container {
+    margin-top:1em;
+    width:100%;
+    height:70%;
+    display:flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: column;
+}
+
+#settings-section {
+    width:100%;
+    height:50%;
+    padding:2em;
+}
+
+#settings-container {
+    margin-top:1em;
+    width:100%;
+    height:80%;
+}
+
+button {
+    border:2px solid var(--buttonbordercolor);
+    background-color: transparent;
+    color:var(--buttontextcolor);
+    text-align: center;
+    width:100%;
+    height:30%;
+    font-size:1em;
+    cursor:pointer; 
+}
+
+#intervalRange {
+    width:100%;
+    height:20%;
+    font-size:1em;
+    background-color:transparent;
+    border:none;
+    border-bottom:1px solid var(--bordercolor);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#submit {
+    margin-top:1em;
+}
