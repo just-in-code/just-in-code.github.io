@@ -2,6 +2,9 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
+    <meta lang="en-us">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -16,8 +19,6 @@
         ]
       }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <title>My Portfolio</title>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <style amp-custom>
         * {
@@ -29,52 +30,35 @@
 
         #container {
             width:100vw;
-            height:400vh;
+            height:auto;
         }
 
         #container > div {
-            width:100%;
+            width:100vw;
             display:flex;
             align-items: center;
             justify-content: space-around;
         }
 
         #header {
-            height:3%;
+            height:10vh;
             box-shadow: 0px 3px 3px #d3d3d3;
             font-weight:300;
         }
 
+        #title-name {
+            font-size:4.5vh;
+        }
+
         #content {
-            height:80%;
+            height:auto;
             flex-direction: column;
-        }
-
-        #navigation {
-            width:15%;
-        }
-
-        #navigations {
-            display:flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .nav-item {
             text-decoration:none;
             color:#40514e;
-        }
-
-        #search {
-            width:15%;
-        }
-
-        #search-bar {
-            width:100%;
-            border:none;
-            border-bottom:1px solid #40514e;
-            padding:0.4vw;
-            font-size:0.8vw;
+            font-size:2.5vh;
         }
 
         #search-bar:focus {
@@ -83,7 +67,7 @@
 
         #masonry-grid {
             width:100%;
-            height:30%;
+            height:100vh;
             padding:3vw;
             display:grid;
             grid-gap:1em;
@@ -120,44 +104,45 @@
             padding-top:10vh;
             display:grid;
             grid-gap: 5em 8em;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: repeat(3, minmax(80px, 1fr));
         }
 
         .product {
-            width:24vw;
+            width:22vw;
             height:40vh;
             background-color:#30e3ca;
+            position:relative;
         }
 
         #footer {
             flex-direction: column;
             width:100%;
-            height:17%;
+            height:auto;
             background-color:#000;
             color:#fff;
             font-size:0.8em;
             padding:5vw;
+            font-size:2vh;
         }
 
         #info {
-            width:100%;
-            height:40%;
+            width:100vw;
+            height:55vh;
             display:flex;
             align-items:center;
             justify-content: space-between;
+            padding:3em;
+            flex-direction: column;
+            text-align: center;
         }
 
         h4 {
             color:#d3d3d3;
         }
 
-        #about {
-            width:85%;
-        }
-
-        img {
+        amp-img {
             width:100%;
-            height:70%;
+            height:62%;
         }
 
         .product-link {
@@ -168,162 +153,168 @@
             text-decoration: none;
             color:#000;
             opacity:0.6;
-            font-size:0.8em;
+            font-size:2.5vh;
             padding:0.5em;
+            position: absolute;
+            left:0px;
+            bottom:0px;
         }
 
         .captions {
-            height:10%;
+            font-size:3vh;
             color:#e4f9f5;
         }
 
+        #contact {
+            width:100%;
+        }
+
+        @media screen and (max-width:600px) {
+            .nav-item {
+                display:none;
+            }
+            #masonry-grid {
+                grid-gap:0.5em;
+                grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                grid-auto-rows: 85px;
+            }
+            #product-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .product {
+                width:100%;
+                height:45vh;
+                background-color:#30e3ca;
+            }
+            #footer{
+                width:100vw;
+                height:120vh;
+            }
+            #info {
+                height:70vh;
+            }
+        }
         </style>
     </head>
         <body>
-
             <div id="container">
+
                 <div id="header">
-            <div id="navigation">
-                <nav id="navigations">
                     <a href="#projects" class="nav-item">My Projects</a>
+                    <div id="title">
+                        <h1 id="title-name">Site Name</h1>
+                    </div>
                     <a href="#about" class="nav-item">About Me</a>
-                </nav>
-            </div>
+                </div>
 
-            <div id="title">
-                <h1 id="title-name">Site Name</h1>
-            </div>
+                <div id="content">
+                    <div id="masonry-grid">
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--3x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--3x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--3x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--3x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--3x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--2x></div>
+                        <div class = grid-item--1x></div>
+                        <div class = grid-item--1x></div>
+                    </div>
+                    <div id="projects">
+                        <h1>My Projects</h1>
+                        <div id="product-grid">
+                        <div class="product">
+                            <amp-img src="Project Files/BinToDec/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>
+                            <div class="captions">Binary To Decimal Converter</div> 
+                            <a class="product-link"  href="Project Files/BinToDec/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Border Radius Previewer/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Border Radius Previewer</div> 
+                            <a class="product-link" href="Project Files/Border Radius Previewer/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/ColorCycle/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Color Cycle</div> 
+                            <a class="product-link" href="Project Files/ColorCycle/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Database App/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Database App</div> 
+                            <a class="product-link" href="Project Files/Database App/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Github Status/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Github Status</div> 
+                            <a class="product-link" href="Project Files/Github Status/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/IOT Mailbox Simulator/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">IOT Mailbox Simulator</div> 
+                            <a class="product-link" href="Project Files/IOT Mailbox Simulator/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Key Value/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Key Value</div> 
+                            <a class="product-link" href="Project Files/Key Value/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Lorem Ipsum Generator/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Lorem Ipsum Generator</div> 
+                            <a class="product-link" href="Project Files/Lorem Ipsum Generator/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product">
+                            <amp-img src="Project Files/Countdown Timer/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Countdown Timer</div> 
+                            <a class="product-link" href="Project Files/Countdown Timer/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product"> 
+                            <amp-img src="Project Files/JSON To CSV/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">JSON To CSV</div> 
+                            <a class="product-link" href="Project Files/JSON To CSV/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product"> 
+                            <amp-img src="Project Files/FlipImage/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Flip Image</div> 
+                            <a class="product-link" href="Project Files/FlipImage/index.html">CLICK TO TRY!</a>
+                        </div>
+                        <div class="product"> 
+                            <amp-img src="Project Files/Rock-Paper-Scissors/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
+                            <div class="captions">Rock-Paper-Scissors</div> 
+                            <a class="product-link" href="Project Files/Rock-Paper-Scissors/index.html">CLICK TO TRY!</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div id="search">
-                <input id="search-bar" placeholder="Search me...">
-            </div> 
-        </div>
-        <div id="content">
-            <div id="masonry-grid">
-                <div class = grid-item--3x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--1x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--3x></div>
-                <div class = grid-item--1x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--3x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--1x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--3x></div>
-                <div class = grid-item--1x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--1x></div>
-                <div class = grid-item--2x></div>
-                <div class = grid-item--2x></div>
-            </div>
-            <div id="projects">
-                <h1>My Projects</h1>
-                <div id="product-grid">
-                    <div class="product">
-                        <amp-img src="Project Files/BinToDec/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>
-                        <div class="captions">
-                            Binary To Decimal Converter
-                        </div> 
-                        <a class="product-link"  href="Project Files/BinToDec/index.html">CLICK TO TRY!</a>
+                <div id="footer">
+                    <div id="info">
+                        <div id="about">
+                            <h1>About Me</h1>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                        </div>
+                        <div id="contact">
+                            <h1>Contact</h1>
+                            <h4>johnDoe@gmail.com <br> +123456789</h4>
+                        </div>
+                        <h1>Site Name</h1>
                     </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Border Radius Previewer/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Border Radius Previewer
-                        </div> 
-                        <a class="product-link"  href="Project Files/Border Radius Previewer/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/ColorCycle/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Color Cycle
-                        </div> 
-                        <a class="product-link"  href="Project Files/ColorCycle/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Database App/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Database App
-                        </div> 
-                        <a class="product-link"  href="Project Files/Database App/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Github Status/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Github Status
-                        </div> 
-                        <a class="product-link"  href="Project Files/Github Status/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/IOT Mailbox Simulator/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            IOT Mailbox Simulator
-                        </div> 
-                        <a class="product-link"  href="Project Files/IOT Mailbox Simulator/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Key Value/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Key Value
-                        </div> 
-                        <a class="product-link"  href="Project Files/Key Value/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Lorem Ipsum Generator/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Lorem Ipsum Generator
-                        </div> 
-                        <a class="product-link"  href="Project Files/Lorem Ipsum Generator/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product">
-                        <amp-img src="Project Files/Countdown Timer/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Countdown Timer
-                        </div> 
-                        <a class="product-link"  href="Project Files/Countdown Timer/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product"> 
-                        <amp-img src="Project Files/JSON To CSV/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            JSON To CSV
-                        </div> 
-                        <a class="product-link"  href="Project Files/JSON To CSV/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product"> 
-                        <amp-img src="Project Files/FlipImage/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Flip Image
-                        </div> 
-                        <a class="product-link"  href="Project Files/FlipImage/index.html">CLICK TO TRY!</a>
-                    </div>
-                    <div class="product"> 
-                        <amp-img src="Project Files/Rock-Paper-Scissors/Screenshot.png" alt="Image" height="450" width="700" layout="responsive"></amp-img>  
-                        <div class="captions">
-                            Rock-Paper-Scissors
-                        </div> 
-                        <a class="product-link"  href="Project Files/Rock-Paper-Scissors/index.html">CLICK TO TRY!</a>
-                    </div>
+                    <hr style="width:100%;">
+                    <h5>@2020 by JOHN DOE. ALL RIGHTS RESERVED. | Proudly Hosted With Github Pages</h5>
                 </div>
             </div>
-        </div>
-        <div id="footer">
-            <div id="info">
-                <div id="about">
-                    <h1>About Me</h1>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                </div>
-                <div id="contact">
-                    <h1>Contact</h1>
-                    <h4>johnDoe@gmail.com <br> +123456789</h4>
-                </div>
-            </div>
-            <h1>Site Name</h1>
-            <hr style="width:100%;">
-            <h5>@2020 by JOHN DOE. ALL RIGHTS RESERVED. | Proudly Hosted With Github Pages</h5>
-        </div>
-    </div>
-  </body>
+        </body>
 </html>
